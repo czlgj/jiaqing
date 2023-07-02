@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+           display: flex; 
+        }
+        .box1{
+            display: flex;
+            width: 900px;
+            align-content: space-between;
+            justify-content: space-around;
+
+        }
+        .box2{
+            width: 800px;
+            display: flex;
+        }
+        .box3{
+            span {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-image: url(./il4wzy6w.bmp);
+            background-position:  -10px -12px;
+            position: fixed;
+            left: 100px;
+            top: 200px;
+          }
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+
+function sendAjax(url) {
+        return new Promise((resolve, reject) => {
+                  
+                const xhr = new XMLHttpRequest();
+                 xhr.responseType = 'json';
+                  
+                xhr.open("GET", "https://api-juejin.suemor.com/api/v1/tab");
+                   
+                xhr.send();
+                    
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 8) {
+                        if (xhr.status >= 200 && xhr.status < 300) {
+                            resolve(xhr.response);
+                        } else {
+                            reject(xhr.status);
+                        }
+                    }
+                }
+            })
+        }
+            
+       
+    </script>
+    
+    <div class="box">
+        <div class="box1" >
+            <img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg
+            " alt="">
+            <div class="ji" ><p id="0">首页</p></div>
+            <div class="ji" ><p id="1">沸点123</p></div>
+            <div class="ji" ><p id="2">课程</p></div>
+            <div class="ji" ><p id="3">直播</p></div>
+            <div class="ji" ><p id="4">活动</p></div>
+            <div class="ji" ><p id="5">竞赛</p></div>
+            <div class="ji" ><p id="6">商店</p></div>
+            <div class="ji" ><p id="7">app</p></div>
+            <div class="ji" ><p id="8">插件</p></div>
+        
+    </div>
+    
+   
+</body>
+</html>
