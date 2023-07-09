@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+	
+	<link href="" rel="stylesheet" />
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+    <script type="text/javascript">
+    	
+   		
+    </script>
+	<style>
+	        .tap{
+	        width: 850px;
+	        display: flex;
+	        justify-content: space-around;
+	        
+	    }
+		.jian{
+			width: 100%;
+			height: 10px;
+		}
+		.jian2{
+			width: 300px;
+			height: 10px;
+		}
+		.box{
+			display: flex;
+		}
+	    .fl{
+	        width: 650px;
+	        display: flex;
+	        justify-content: space-between;
+	    }
+		.box1{
+			width: 100%;
+			height: 100%px;
+			display: flex;
+			justify-content: space-around;
+			
+			background-color: #e8e9e9;
+			
+		}
+		.jian3{
+			width: 100%;
+			height: 10px;
+			background-color: #e8e9e9;
+		}
+		.text{
+			width: 720px;
+			height: 100%;
+			background-color: white;
+		}
+		.h{
+			border-bottom : solid 1px #e8e9e9;;
+		}
+		li{
+			type: none;
+			height: 100%x;
+			border-bottom : solid 1px #e8e9e9;;
+		}
+		.j{
+			width: 300px;
+		}
+		.tp{
+			height: 200px;
+			width: 100%;
+			background-image: url("https://qiniu.suemor.com/1677070571474-adtesttsest.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.box2{
+			width: 1000px;
+			height: 100%;
+			display: flex;
+			
+		}
+		.jian4{
+			height: 100%;
+			width: 20px;
+		}
+	    </style>
+</head>
+<body>
+	<script>
+		var ji0 = document.getElementById("ji0");
+		var ji1 = document.getElementById("ji1");
+		var ji2 = document.getElementById("ji2");
+		var ji3 = document.getElementById("ji3");
+		var ji4 = document.getElementById("ji4");
+		var ji5 = document.getElementById("ji5");
+		var ji6 = document.getElementById("ji6");
+		var ji7 = document.getElementById("ji7");
+		var ji8 = document.getElementById("ji8");
+		
+		fetch("https://api-juejin.suemor.com/api/v1/tab").then((res)=>res.json()).then((res)=>{
+					
+						ji0.innerHTML = res.data[0].title;
+						ji1.innerHTML = res.data[1].title;
+						ji2.innerHTML = res.data[2].title;
+						ji3.innerHTML = res.data[3].title;
+						ji4.innerHTML = res.data[4].title;
+						ji5.innerHTML = res.data[5].title;
+						ji6.innerHTML = res.data[6].title;
+						ji7.innerHTML = res.data[7].title;
+						ji8.innerHTML = res.data[8].title;
+					
+				});
+				var text = document.getElementsByClassName("text1")
+		fetch("https://api-juejin.suemor.com/api/v1/post?pageCurrent=1&pageSize=15").then((res)=>res.json()).then((res)=>{
+			for(var i=0;i<9;i++ ){
+				text.innerHtml=res.postList[i].title;
+			}
+		});
+	</script>
+	<div class="tap">
+		<img src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/e08da34488b114bd4c665ba2fa520a31.svg" alt="">
+		<a  id="ji0">首页</a>
+		<a  id="ji1">沸点123</a>
+		<a  id="ji2">课程</a>
+		<a  id="ji3">直播</a>
+		<a  id="ji4">活动</a>
+		<a  id="ji5">竞赛</a>
+		<a  id="ji6">商店</a>
+		<a  id="ji7">App</a>
+		<a  id="ji8">插件</a>
+	</div>
+	<div class="jian"></div>
+	<div class="box">
+		<div class="jian2"></div>
+		<div class="fl">
+					<a >综合</a>
+			        <a >前端123</a>
+			        <a >后端</a>
+			        <a >Andorid</a>
+			        <a >ios</a>
+			        <a >人工智能</a>
+			        <a >开发工具</a>
+			        <a >代码人生</a>
+			        <a >阅读</a>
+		</div>
+	</div>
+	<div class="jian3"></div>
+	
+	<div class="box1">
+		
+		<div class="box2">
+			<div class="text">
+				
+				<div class="h">
+					<p>推荐</p>
+				</div>
+			
+				<ul class="mui-table-view">
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|TypeScript 体操
+							</a>
+							<h3>TypeScript 类型父子级、逆变、协变、双向协变和不变 test</h3>
+							<p>我也是最近刚接触到了这些知识，文章可能有些错误，希望大佬多多指点（\n\n对于学习</p>
+					</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+									amaid|5个月|广告
+							</a>
+							<h3>新年伊始，2月更文带你在技术写作之路「兔飞猛进」｜ 掘金日新计划</h3>
+							<p></p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|vue
+							</a>
+							<h3>初学Vue3</h3>
+							<p>近正在学习 Vue3，尝试把一些重点和踩过的坑给记录下来。\n\n## 准备\n\n首先我们使用</p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|Nuxt
+							</a>
+							<h3>初识 Nuxt3</h3>
+							<p>在去年 Vue3 的正式版就发布了，但其周边生态的跟进却较为缓慢，当我们有 SSR 的需求时</p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|TypeScript
+							</a>
+							<h3>封装一个字典函数</h3>
+							<p>完整代码: https://codesandbox.io/s/awesome-margulis-q2xibv?file=/src/index.t</p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|ios
+							</a>
+							<h3>iOS</h3>
+							<p>iOS 4中引入了資料夾的功能，用戶可以透過將應用程式拖放到另一個上面來創建，從那時</p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|React
+							</a>
+							<h3>React 中的 memo、useMemo及useCallback</h3>
+							<p>距离我接触 react 已经过去几个月了，在此期间，关于如何避免重复渲染的问题一直困惑着我，因此今天就来聊聊这个话题。</p>
+						</li>
+						<li class="mui-table-view-cell" type="none">
+							<a class="mui-navigate-right" class="text1">
+								amaid|5个月|人工智能
+							</a>
+							<h3>2023-02-18 来聊聊 ChatGPT 和 New Bing 的使用感受</h3>
+							<p>近，ChatGPT 又一次成为热门话题，然而，没过多久就有一款比 ChatGPT 更加强大的 New
+					
+					</ul>
+				</div>
+				<div class="jian4"></div>
+				<div class="j">
+					<div class="tp"></div>
+				</div>
+				
+		</div>
+		
+	</div>
+	
+</body>
+
+</html>
